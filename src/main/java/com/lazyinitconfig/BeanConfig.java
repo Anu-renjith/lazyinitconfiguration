@@ -10,13 +10,13 @@ import org.springframework.context.annotation.Lazy;
 @ComponentScan("com.lazyinitconfig")
 public class BeanConfig {
       
-  @Bean
+  @Bean(name="a")
   @Lazy(true)
 
     public A displayName(){
         A a=new A();
         a.setName("anu");
-        a.getName();
+      
         return a;
     }
    @Bean
